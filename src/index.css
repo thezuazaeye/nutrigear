@@ -1,5 +1,6 @@
 :root {
   --color-primario: #2E5C4A;
+  --color-primario-oscuro: #1f4033;
   --color-acento: #E8A33D;
   --color-fondo: #F5F5F5;
   --color-texto: #333333;
@@ -10,25 +11,92 @@ body {
   color: var(--color-texto);
 }
 
-.header-nutrigear {
-  background-color: var(--color-primario);
-}
-
+/* Header */
+.header-nutrigear { background-color: var(--color-primario); }
+.header-nutrigear .navbar-brand { font-weight: 700; font-size: 1.4rem; }
+.marca-acento { color: var(--color-acento); }
 .header-nutrigear .nav-link:hover,
-.header-nutrigear .nav-link.active {
-  color: var(--color-acento) !important;
+.header-nutrigear .nav-link.active { color: var(--color-acento) !important; }
+.enlace-admin { font-weight: 600; }
+
+/* Footer */
+.footer-nutrigear { background-color: var(--color-primario); color: #fff; }
+.footer-nutrigear a { color: #fff; text-decoration: none; }
+.footer-nutrigear a:hover { color: var(--color-acento); }
+
+/* Botones */
+.btn-nutri {
+  background-color: var(--color-acento);
+  border-color: var(--color-acento);
+  color: #2b2b2b;
+  font-weight: 600;
+}
+.btn-nutri:hover:not(:disabled) {
+  background-color: #d4912a;
+  border-color: #d4912a;
+  color: #1a1a1a;
 }
 
-.footer-nutrigear {
-  background-color: var(--color-primario);
-  color: white;
+/* Hero */
+.hero {
+  background: linear-gradient(135deg, var(--color-primario) 0%, var(--color-primario-oscuro) 100%);
+  color: #fff;
+  padding: 4.5rem 0;
 }
 
-.footer-nutrigear a {
-  color: white;
+/* Beneficios */
+.beneficio {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+.beneficio-icono { font-size: 1.8rem; }
+
+.titulo-seccion {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  padding-left: 0.6rem;
+  border-left: 5px solid var(--color-acento);
+}
+
+.chip-categoria {
+  background: #fff;
+  border: 2px solid var(--color-primario);
+  color: var(--color-primario);
+  border-radius: 999px;
+  padding: 0.35rem 1rem;
   text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.2s, color 0.2s;
 }
+.chip-categoria:hover { background: var(--color-primario); color: #fff; }
 
-.footer-nutrigear a:hover {
-  color: var(--color-acento);
+/* Tarjeta de producto */
+.producto-card { border: 0; border-radius: 14px; overflow: hidden; transition: transform 0.2s, box-shadow 0.2s; }
+.producto-card:hover { transform: translateY(-4px); box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15) !important; }
+.producto-img-wrap { position: relative; display: block; background: #fff; }
+.producto-img { width: 100%; aspect-ratio: 1 / 1; object-fit: contain; padding: 0.5rem; }
+.producto-badge {
+  position: absolute; top: 0.6rem; left: 0.6rem;
+  background-color: var(--color-primario); color: #fff;
+}
+.producto-badge-inline { background-color: var(--color-primario); color: #fff; }
+.producto-precio { color: var(--color-primario); font-weight: 700; font-size: 1.25rem; }
+.detalle-img { background: #fff; padding: 1rem; width: 100%; }
+.carrito-img { width: 48px; height: 48px; object-fit: contain; background: #fff; border-radius: 6px; }
+
+/* Cajas auxiliares */
+.caja-demo { background: #fff; border-radius: 12px; padding: 1.25rem; box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08); }
+.articulo { max-width: 760px; }
+
+/* Admin */
+.admin-menu { background: #fff; border-radius: 12px; padding: 1rem; display: flex; flex-direction: column; gap: 0.25rem; box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08); }
+.admin-link { color: var(--color-texto); text-decoration: none; padding: 0.5rem 0.75rem; border-radius: 8px; }
+.admin-link:hover { background: var(--color-fondo); }
+.admin-link.active { background: var(--color-primario); color: #fff; }
+.tarjeta-admin { background: #fff; border-radius: 12px; padding: 1.25rem; box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08); }
+
+@media (max-width: 576px) {
+  .hero { padding: 3rem 0; }
 }
