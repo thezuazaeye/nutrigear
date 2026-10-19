@@ -9,3 +9,26 @@ body {
   background-color: var(--color-fondo);
   color: var(--color-texto);
 }
+
+.header-nutrigear {
+  background-color: var(--color-primario);
+}
+
+.header-nutrigear .nav-link:hover,
+.header-nutrigear .nav-link.active {
+  color: var(--color-acento) !important;
+}
+
+.footer-nutrigear {
+  background-color: var(--color-primario);
+  color: white;
+}
+
+.footer-nutrigear a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-nutrigear a:hover {
+  color: var(--color-acento);
+}
